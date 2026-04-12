@@ -1,0 +1,49 @@
+Technology Companies: Key Facts and Relationships
+
+OpenAI
+OpenAI is an AI safety and research company founded in December 2015. The founding team
+included Sam Altman, Elon Musk, Greg Brockman, Ilya Sutskever, Wojciech Zaremba, and
+John Schulman. OpenAI is headquartered in San Francisco, California. Sam Altman serves
+as the Chief Executive Officer of OpenAI. OpenAI created ChatGPT, GPT-4, DALL-E, and
+the Codex programming model. Microsoft invested approximately $10 billion in OpenAI and
+partnered with the company to integrate AI into Azure cloud services.
+
+Tesla
+Tesla Inc. is an electric vehicle and clean energy company. Elon Musk is the CEO and
+a co-founder of Tesla. Tesla is headquartered in Austin, Texas. The company produces
+electric cars including the Model S, Model 3, Model X, Model Y, and Cybertruck.
+Tesla also manufactures energy storage products and solar panels. JB Straubel
+co-founded Tesla and served as Chief Technical Officer.
+
+SpaceX
+Space Exploration Technologies Corp (SpaceX) is a private aerospace manufacturer.
+Elon Musk founded SpaceX in 2002 and serves as its CEO and chief engineer. SpaceX is
+headquartered in Hawthorne, California. The company developed the Falcon 9, Falcon Heavy,
+and Starship rockets. SpaceX created the Starlink satellite internet constellation.
+
+Google and Alphabet
+Google was founded by Larry Page and Sergey Brin in 1998 while they were PhD students
+at Stanford University. Sundar Pichai is the CEO of Google and of its parent company
+Alphabet Inc. Google is headquartered in Mountain View, California. Google developed
+TensorFlow, the BERT language model, and the Gemini AI system. Google owns YouTube,
+which was acquired in 2006. Google Cloud competes with Amazon AWS and Microsoft Azure.
+
+Microsoft
+Microsoft Corporation was founded by Bill Gates and Paul Allen in 1975. Satya Nadella
+has served as CEO of Microsoft since 2014. Microsoft is headquartered in Redmond,
+Washington. The company acquired LinkedIn in 2016 for $26 billion and GitHub in 2018
+for $7.5 billion. Microsoft Azure is a major cloud computing platform. Microsoft
+partnered with OpenAI and integrated GPT models into its products.
+
+Meta Platforms
+Meta Platforms, formerly known as Facebook, was founded by Mark Zuckerberg at Harvard
+University in 2004. Mark Zuckerberg is the CEO of Meta. Meta is headquartered in
+Menlo Park, California. Meta owns Instagram (acquired 2012), WhatsApp (acquired 2014),
+and the Oculus VR headset brand. Meta developed the LLaMA language model series and
+PyTorch, a popular deep learning framework.
+
+Amazon
+Amazon was founded by Jeff Bezos in 1994 in Seattle, Washington. Andy Jassy became
+CEO of Amazon in 2021. Amazon Web Services (AWS) is the company's cloud computing
+division and is a market leader in cloud infrastructure. Amazon acquired Whole Foods
+Market in 2017 and MGM Studios in 2022. Amazon developed the Alexa voice assistant.

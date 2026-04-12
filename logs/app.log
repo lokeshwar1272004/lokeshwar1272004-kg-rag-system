@@ -1,0 +1,829 @@
+2026-04-09 21:06:13 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 21:06:13 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 21:06:19 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-09 21:06:24 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-09 21:06:33 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 21:06:33 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 21:06:34 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 21:07:19 | INFO     | query.pipeline:run:96 - Processing query: Who works at Tesla?...
+2026-04-09 21:07:19 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:07:19 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:07:19 | INFO     | query.classifier:classify:107 - Query classified [QueryType.GRAPH] (keywords, conf=0.70): Who works at Tesla?
+2026-04-09 21:07:19 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=None
+2026-04-09 21:13:00 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-09 21:13:00 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-09 21:14:42 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-09 21:14:42 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-09 21:14:47 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-09 21:14:47 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-09 21:14:48 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-09 21:14:48 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 3 vectors, 20 entities, 29 relations
+2026-04-09 21:15:17 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-09 21:15:17 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:15:17 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:15:17 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.70): who is msd
+2026-04-09 21:15:17 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:15:17 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=3 graph=0 conf=medium llm=None
+2026-04-09 21:18:14 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who is msd...
+2026-04-09 21:35:02 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 21:35:02 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 21:35:05 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-09 21:35:07 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-09 21:35:12 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 21:35:12 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 21:35:13 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 21:37:28 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 21:37:28 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 21:37:30 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-09 21:37:32 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-09 21:37:37 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 21:37:37 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 21:37:37 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 21:37:48 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-09 21:37:51 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:37:51 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:37:51 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:37:51 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.70): who is msd
+2026-04-09 21:38:16 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-09 21:38:18 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:38:18 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:38:18 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=3 graph=0 conf=medium llm=Ollama
+2026-04-09 21:39:05 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-09 21:39:54 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-09 21:41:14 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: custom_text
+2026-04-09 21:41:14 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'custom_text'
+2026-04-09 21:41:14 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-09 21:41:16 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-09 21:41:16 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-09 21:41:16 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 17 entities, 37 relations from 3 chunks
+2026-04-09 21:41:16 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'custom_text': 3 chunks, 3 vectors, 17 entities, 37 relations
+2026-04-09 21:41:49 | INFO     | query.pipeline:run:96 - Processing query: who is MS Dhoni...
+2026-04-09 21:41:51 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:41:51 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:41:51 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:41:51 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.70): who is MS Dhoni
+2026-04-09 21:41:54 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:41:54 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:41:54 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=5 graph=4 conf=high llm=Ollama
+2026-04-09 21:43:26 | INFO     | query.pipeline:run:96 - Processing query: how many cups he win...
+2026-04-09 21:43:29 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:43:29 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:43:29 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:43:29 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.50): how many cups he win
+2026-04-09 21:43:31 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:43:31 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:43:31 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=5 graph=0 conf=medium llm=Ollama
+2026-04-09 21:44:21 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpm4sh_o6c.html'
+2026-04-09 21:45:04 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp7kjl1qo2.html'
+2026-04-09 21:47:04 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 21:47:04 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 21:47:06 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-09 21:47:08 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-09 21:47:13 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 21:47:13 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 21:47:14 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 21:47:36 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-09 21:48:17 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: custom_text
+2026-04-09 21:48:17 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'custom_text'
+2026-04-09 21:48:41 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-09 21:48:41 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-09 21:48:43 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-09 21:48:43 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-09 21:48:43 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 17 entities, 37 relations from 3 chunks
+2026-04-09 21:48:43 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'custom_text': 3 chunks, 3 vectors, 17 entities, 37 relations
+2026-04-09 21:48:59 | INFO     | query.pipeline:run:96 - Processing query: who msd...
+2026-04-09 21:49:02 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:49:02 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:49:02 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:49:02 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.50): who msd
+2026-04-09 21:49:04 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:49:04 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:49:04 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=3 graph=0 conf=medium llm=Ollama
+2026-04-09 21:50:12 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmphxr6k2xg.html'
+2026-04-09 21:52:50 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 21:52:50 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 21:52:52 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-09 21:52:54 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-09 21:52:59 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 21:52:59 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 21:52:59 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 21:53:29 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who msd...
+2026-04-09 21:54:37 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-09 21:54:37 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-09 21:55:00 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-09 21:55:00 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-09 21:55:02 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-09 21:55:02 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-09 21:55:02 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-09 21:55:02 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 3 vectors, 20 entities, 29 relations
+2026-04-09 21:56:27 | INFO     | query.pipeline:run:96 - Processing query: he is won ipl trophy...
+2026-04-09 21:56:30 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:56:30 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:56:30 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 21:56:30 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.50): he is won ipl trophy
+2026-04-09 21:56:32 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 21:56:32 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 21:56:32 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=5 graph=0 conf=medium llm=Ollama
+2026-04-09 21:57:07 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpfvul_z10.html'
+2026-04-09 22:00:29 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-09 22:00:29 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-09 22:00:31 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-09 22:00:33 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-09 22:00:39 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-09 22:00:39 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-09 22:00:40 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-09 22:00:50 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-09 22:00:53 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 22:00:53 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 22:00:53 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 22:00:53 | INFO     | query.classifier:classify:107 - Query classified [QueryType.HYBRID] (keywords, conf=0.70): who is msd
+2026-04-09 22:01:22 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-09 22:01:24 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 22:01:24 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 22:01:24 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=5 graph=0 conf=medium llm=Ollama
+2026-04-09 22:20:31 | INFO     | query.pipeline:run:96 - Processing query: Who works at Tesla?...
+2026-04-09 22:20:34 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 22:20:34 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 22:20:34 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 22:20:34 | INFO     | query.classifier:classify:107 - Query classified [QueryType.GRAPH] (keywords, conf=0.70): Who works at Tesla?
+2026-04-09 22:20:34 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-09 22:20:47 | INFO     | query.pipeline:run:96 - Processing query: How is Musk related to SpaceX?...
+2026-04-09 22:20:50 | ERROR    | llm.llm_router:generate:127 - Ollama error: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-09 22:20:50 | ERROR    | llm.llm_router:generate:193 - Both LLMs failed to generate a response.
+2026-04-09 22:20:50 | WARNING  | query.classifier:classify:103 - LLM classification failed: Could not parse classification: I WAS UNABLE TO GENERATE A RESPONSE. PLEASE CHECK YOUR LLM CONFIGURATION.. Using keywords.
+2026-04-09 22:20:50 | INFO     | query.classifier:classify:107 - Query classified [QueryType.GRAPH] (keywords, conf=0.60): How is Musk related to SpaceX?
+2026-04-09 22:20:50 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 10:44:54 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 10:44:54 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 10:44:59 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-10 10:45:02 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 10:45:10 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 10:45:10 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 10:45:13 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 19:33:36 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 19:33:36 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 19:33:44 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-10 19:33:53 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 19:34:03 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 19:34:03 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 19:34:04 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 19:48:02 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 19:48:02 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 19:48:06 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-10 19:48:12 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 19:48:21 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 19:48:21 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 19:48:22 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 20:12:52 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 20:12:52 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 20:12:55 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-10 20:12:58 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 20:13:04 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 20:13:04 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 20:13:05 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 20:14:38 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 20:14:38 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 20:14:40 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-10 20:14:42 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 20:14:48 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 20:14:48 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 20:14:48 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 20:16:26 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 20:16:26 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-10 20:16:35 | INFO     | utils.cache:__init__:31 - Cache initialized at: D:\AI_projects\kg_rag_system\kg_rag_system\data\cache
+2026-04-10 20:16:35 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-10 20:16:38 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3
+2026-04-10 20:16:40 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 20:16:45 | ERROR    | graph.neo4j_client:_connect:162 - Neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-04-10 20:16:45 | WARNING  | graph.neo4j_client:get_graph_client:320 - Neo4j unavailable. Falling back to NetworkX.
+2026-04-10 20:16:46 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 21:31:31 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 21:31:32 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 21:31:34 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 21:31:37 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 21:31:37 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 21:31:39 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 21:32:15 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 21:32:15 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 21:33:32 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-10 21:33:32 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 21:33:36 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 21:33:36 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 21:33:36 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 21:33:36 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 21:33:59 | INFO     | query.pipeline:run:96 - Processing query: WHO IS MSD...
+2026-04-10 21:34:00 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): WHO IS MSD
+2026-04-10 21:34:00 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 21:34:22 | INFO     | query.pipeline:run:96 - Processing query: How is Musk related to SpaceX?...
+2026-04-10 21:34:22 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): How is Musk related to SpaceX?
+2026-04-10 21:34:22 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 21:34:28 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:33 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:34 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:34 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:35 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:35 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:37 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:41 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: WHO IS MSD...
+2026-04-10 21:34:54 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 21:34:55 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 21:34:57 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 21:34:59 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 21:34:59 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 21:35:00 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 21:35:22 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-10 21:35:23 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-10 21:35:23 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 21:37:25 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 21:37:25 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 21:39:02 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-10 21:39:02 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 21:39:06 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 21:39:06 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 21:39:06 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 21:39:06 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 21:39:21 | INFO     | query.pipeline:run:96 - Processing query: how many cups he win...
+2026-04-10 21:39:22 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): how many cups he win
+2026-04-10 21:39:22 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-10 21:40:30 | INFO     | query.pipeline:run:96 - Processing query: count of how many cups he won...
+2026-04-10 21:40:30 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): count of how many cups he won
+2026-04-10 21:40:30 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 21:40:36 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: count of how many cups he won...
+2026-04-10 21:40:44 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: count of how many cups he won...
+2026-04-10 21:40:46 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: count of how many cups he won...
+2026-04-10 21:40:47 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: count of how many cups he won...
+2026-04-10 21:41:57 | INFO     | query.pipeline:run:96 - Processing query: count of cups msd won...
+2026-04-10 21:41:57 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): count of cups msd won
+2026-04-10 21:41:57 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 21:42:12 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 21:42:12 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 21:42:12 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 21:42:12 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 21:42:12 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 21:42:12 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 21:43:28 | INFO     | query.pipeline:run:96 - Processing query: number of cups msd won ...
+2026-04-10 21:43:28 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): number of cups msd won 
+2026-04-10 21:43:28 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-10 21:44:22 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpb3k13mpx.html'
+2026-04-10 22:41:23 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 22:41:24 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 22:41:27 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 22:41:33 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (6 docs)
+2026-04-10 22:41:33 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 22:41:35 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 22:42:02 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 22:42:02 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 22:42:24 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-10 22:42:25 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 22:42:27 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 22:42:27 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 22:42:27 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 22:42:27 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 22:42:58 | INFO     | query.pipeline:run:96 - Processing query: when msd won 50 over world cup...
+2026-04-10 22:43:00 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 22:43:09 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): when msd won 50 over world cup
+2026-04-10 22:43:09 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 22:43:37 | INFO     | query.pipeline:run:96 - Processing query: when msd won  world cup...
+2026-04-10 22:43:38 | INFO     | query.pipeline:run:96 - Processing query: when msd won  world cup...
+2026-04-10 22:43:38 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 22:43:39 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 22:43:39 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 22:43:41 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): when msd won  world cup
+2026-04-10 22:43:41 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 22:43:42 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): when msd won  world cup
+2026-04-10 22:43:42 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 22:44:04 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:08 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:09 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:10 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:12 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:14 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:27 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: when msd won  world cup...
+2026-04-10 22:44:49 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-10 22:44:50 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 22:44:50 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 22:44:54 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-10 22:44:54 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 22:45:01 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpy101atwb.html'
+2026-04-10 22:45:31 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 22:45:31 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 22:45:31 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 22:45:31 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 22:45:43 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 5 relations
+2026-04-10 22:45:51 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-10 22:45:51 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 7 relations from 3 chunks
+2026-04-10 22:45:51 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 7 relations
+2026-04-10 22:46:16 | INFO     | query.pipeline:run:96 - Processing query: who msd...
+2026-04-10 22:46:17 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 22:46:17 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 22:46:21 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who msd
+2026-04-10 22:46:21 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 22:46:53 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who msd...
+2026-04-10 22:46:56 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who msd...
+2026-04-10 22:47:01 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who msd...
+2026-04-10 22:47:29 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-10 22:47:31 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-10 22:48:05 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-10 22:51:48 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-10 22:53:03 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 22:53:04 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 22:53:08 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-10 22:53:11 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 22:53:11 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 22:53:11 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 22:53:52 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 22:53:53 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 22:53:55 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 22:53:57 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 22:53:57 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 22:53:58 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 22:54:53 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 22:54:54 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 22:54:56 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 22:54:58 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 22:54:58 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 22:54:59 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 22:57:41 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 22:57:41 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 22:57:44 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 22:57:46 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 22:57:46 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 22:57:46 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 23:04:22 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: custom_text
+2026-04-10 23:04:22 | INFO     | ingestion.preprocessor:process:88 - Generated 5 chunks from 'custom_text'
+2026-04-10 23:04:43 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-10 23:04:43 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:04:43 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-10 23:04:45 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 23:04:45 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 5 chunks...
+2026-04-10 23:04:47 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:04:57 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-10 23:04:59 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:05:06 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-10 23:05:07 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:05:07 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:05:14 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-10 23:05:14 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 8 entities, 6 relations from 4 chunks
+2026-04-10 23:05:14 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'custom_text': 5 chunks, 0 vectors, 8 entities, 6 relations
+2026-04-10 23:05:55 | INFO     | query.pipeline:run:96 - Processing query: what is ai...
+2026-04-10 23:05:59 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is ai
+2026-04-10 23:05:59 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:05:59 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:06:18 | INFO     | query.pipeline:run:96 - Processing query: Explain transformers...
+2026-04-10 23:06:19 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:06:19 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:06:23 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): Explain transformers
+2026-04-10 23:06:23 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:06:23 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:07:04 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp3sngnesy.html'
+2026-04-10 23:07:31 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:07:31 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:07:31 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:07:31 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-10 23:07:31 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:07:31 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:07:31 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:07:50 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-10 23:07:52 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:07:52 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:07:55 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-10 23:07:55 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:08:23 | INFO     | query.pipeline:run:96 - Processing query: how many cups he won...
+2026-04-10 23:08:26 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): how many cups he won
+2026-04-10 23:08:26 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:08:52 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpamxh2kce.html'
+2026-04-10 23:09:12 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpoqf665kn.html'
+2026-04-10 23:09:23 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp0np425e4.html'
+2026-04-10 23:09:27 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp1l8m2vlg.html'
+2026-04-10 23:09:32 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp78k0wlam.html'
+2026-04-10 23:09:33 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpwmtukqym.html'
+2026-04-10 23:09:56 | INFO     | query.pipeline:run:96 - Processing query: 2011...
+2026-04-10 23:09:58 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:09:58 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:10:01 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): 2011
+2026-04-10 23:10:01 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:10:01 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:11:04 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: 2011...
+2026-04-10 23:11:08 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: 2011...
+2026-04-10 23:11:09 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: 2011...
+2026-04-10 23:11:45 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 23:11:45 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 23:11:48 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-10 23:11:50 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 23:11:50 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 23:11:50 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 23:13:07 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:13:07 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:13:26 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-10 23:13:26 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:13:26 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-10 23:13:30 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 23:13:30 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:13:30 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:13:30 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:13:38 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:13:38 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:13:38 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:13:38 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-10 23:13:38 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:13:39 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:13:51 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 5 relations
+2026-04-10 23:13:52 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:14:00 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-10 23:14:00 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 7 relations from 3 chunks
+2026-04-10 23:14:00 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 7 relations
+2026-04-10 23:14:33 | INFO     | query.pipeline:run:96 - Processing query: who ms dhoni...
+2026-04-10 23:14:33 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:14:33 | INFO     | query.pipeline:run:131 - Query answered [HYBRID] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:15:13 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-10 23:15:22 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:15:22 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:15:22 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:15:22 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-10 23:15:22 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:15:23 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:15:23 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:15:43 | INFO     | query.pipeline:run:96 - Processing query: msd 2011...
+2026-04-10 23:15:45 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:15:45 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:15:49 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): msd 2011
+2026-04-10 23:15:49 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:21:21 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp449s5kp9.html'
+2026-04-10 23:31:55 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 23:31:56 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 23:31:58 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-10 23:32:00 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-10 23:32:00 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 23:32:01 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 23:32:20 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:32:20 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:32:46 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-10 23:32:46 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-10 23:32:48 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 23:32:48 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:32:48 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:32:48 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 3 vectors, 20 entities, 29 relations
+2026-04-10 23:33:14 | INFO     | query.pipeline:run:96 - Processing query: who is ms dhoni...
+2026-04-10 23:33:16 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is ms dhoni
+2026-04-10 23:33:16 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:33:43 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-10 23:33:43 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-10 23:33:43 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:33:57 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:33:57 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:33:57 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 23:33:57 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:33:57 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:33:57 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:34:07 | INFO     | query.pipeline:run:96 - Processing query: number of cups msd won ...
+2026-04-10 23:34:08 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): number of cups msd won 
+2026-04-10 23:34:08 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=3 graph=0 conf=medium llm=Groq
+2026-04-10 23:34:38 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 23:34:39 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 23:34:41 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-10 23:34:43 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-10 23:34:43 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 23:34:43 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 23:35:09 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:35:09 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:35:27 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-10 23:35:27 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 23:35:29 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 23:35:29 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:35:29 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:35:29 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:35:50 | INFO     | query.pipeline:run:96 - Processing query: who  is msd...
+2026-04-10 23:35:51 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:36:09 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who  is msd
+2026-04-10 23:36:09 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:36:30 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who  is msd...
+2026-04-10 23:36:38 | INFO     | query.pipeline:run:96 - Processing query: who  is ms...
+2026-04-10 23:36:39 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:36:43 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who  is ms
+2026-04-10 23:36:43 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:37:05 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:37:05 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:37:06 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 23:37:06 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:37:06 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:37:06 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:37:26 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who is msd...
+2026-04-10 23:38:16 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-10 23:38:16 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-10 23:38:19 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-10 23:38:21 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-10 23:38:21 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-10 23:38:22 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-10 23:38:32 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-10 23:38:32 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-10 23:38:54 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-10 23:38:54 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-10 23:38:56 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-10 23:38:56 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-10 23:38:56 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-10 23:38:56 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-10 23:39:22 | INFO     | query.pipeline:run:96 - Processing query: who is ms dhoni...
+2026-04-10 23:39:24 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:39:28 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is ms dhoni
+2026-04-10 23:39:28 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:39:47 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who is ms dhoni...
+2026-04-10 23:39:59 | INFO     | query.pipeline:run:96 - Processing query: Explain transformers...
+2026-04-10 23:40:01 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:40:05 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): Explain transformers
+2026-04-10 23:40:05 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:40:05 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Groq
+2026-04-10 23:40:11 | INFO     | query.pipeline:run:96 - Processing query: Who works at Tesla?...
+2026-04-10 23:40:13 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-10 23:40:13 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-10 23:40:17 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): Who works at Tesla?
+2026-04-10 23:40:17 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:40:31 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-10 23:40:35 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-10 23:40:35 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-10 23:40:51 | INFO     | query.pipeline:run:93 - Pipeline cache HIT for: who is ms dhoni...
+2026-04-10 23:41:06 | INFO     | query.pipeline:run:96 - Processing query:  ms dhoni 2011...
+2026-04-10 23:41:11 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90):  ms dhoni 2011
+2026-04-10 23:41:11 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-10 23:41:11 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Ollama
+2026-04-12 10:45:02 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 10:45:03 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 10:45:08 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-12 10:45:18 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 10:45:18 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 10:45:19 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 11:06:41 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 11:06:43 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 11:06:47 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-12 11:06:54 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 11:06:54 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 11:06:54 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 11:07:32 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 11:07:33 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 11:07:37 | WARNING  | llm.llm_router:_init:96 - Ollama not available: [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-12 11:07:40 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 11:07:40 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 11:07:41 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 11:08:27 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 11:08:28 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 11:08:31 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 11:08:33 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 11:08:33 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 11:08:34 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 11:08:58 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 11:08:58 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 11:10:28 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 11:10:30 | INFO     | rag.vector_store:add_chunks:111 - Indexed 13 chunks into ChromaDB.
+2026-04-12 11:10:37 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 11:10:37 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 11:10:39 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 6 relations
+2026-04-12 11:10:40 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 6 relations
+2026-04-12 11:10:40 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 11:10:41 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 5 relations
+2026-04-12 11:10:41 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 12 relations
+2026-04-12 11:10:42 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 5 relations
+2026-04-12 11:10:43 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 8 relations
+2026-04-12 11:10:48 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 4 relations
+2026-04-12 11:10:52 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 11:10:52 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 50 relations from 12 chunks
+2026-04-12 11:10:52 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 13 vectors, 31 entities, 50 relations
+2026-04-12 11:11:28 | INFO     | query.pipeline:run:96 - Processing query: what is agentic ai...
+2026-04-12 11:11:28 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is agentic ai
+2026-04-12 11:11:29 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-12 11:11:50 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmp69xrb1hj.html'
+2026-04-12 11:12:04 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpn497t3fm.html'
+2026-04-12 11:42:36 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 11:42:36 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 11:42:39 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 11:42:45 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (16 docs)
+2026-04-12 11:42:45 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 11:42:46 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 11:43:03 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 11:43:03 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 11:44:27 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 11:44:27 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-12 11:44:32 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 11:44:32 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 11:44:32 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 11:44:32 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 13 relations
+2026-04-12 11:44:55 | INFO     | query.pipeline:run:96 - Processing query: what is agentic ai...
+2026-04-12 11:44:57 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is agentic ai
+2026-04-12 11:44:57 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-12 11:45:21 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpw51lu_sy.html'
+2026-04-12 11:48:35 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 11:48:36 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 11:48:38 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 11:48:40 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (16 docs)
+2026-04-12 11:48:40 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 11:48:40 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 12:13:53 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 12:13:53 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 12:15:16 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 12:15:16 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-12 12:15:20 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 12:15:20 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 12:15:21 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 12:15:21 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 13 relations
+2026-04-12 12:15:58 | INFO     | query.pipeline:run:96 - Processing query: what is agentic ai...
+2026-04-12 12:15:59 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is agentic ai
+2026-04-12 12:16:00 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-12 12:16:31 | ERROR    | graph.visualizer:create_graph_html:178 - Graph visualization failed: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\LOKESH~1\\AppData\\Local\\Temp\\tmpjf2csy8r.html'
+2026-04-12 12:25:24 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 12:25:25 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 12:25:28 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 12:25:34 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (16 docs)
+2026-04-12 12:25:34 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 12:25:35 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 12:25:47 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 12:25:47 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 12:26:13 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 12:26:13 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-12 12:26:15 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 12:26:15 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 12:26:16 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 12:26:16 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 13 relations
+2026-04-12 12:27:02 | INFO     | query.pipeline:run:96 - Processing query: what is AI...
+2026-04-12 12:27:03 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is AI
+2026-04-12 12:27:03 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Groq
+2026-04-12 12:34:48 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 12:34:49 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 12:36:11 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 12:36:12 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 12:36:15 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 12:36:17 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (16 docs)
+2026-04-12 12:36:17 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 12:36:18 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 12:36:39 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 12:36:39 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 12:37:03 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-12 12:37:03 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-12 12:37:06 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 12:37:06 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 12:37:06 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 12:37:06 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 13 relations
+2026-04-12 12:38:34 | INFO     | query.pipeline:run:96 - Processing query: what is agentic ai...
+2026-04-12 12:38:36 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:38:57 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is agentic ai
+2026-04-12 12:38:57 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-12 12:38:57 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Groq
+2026-04-12 12:39:52 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-12 12:39:52 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-12 12:39:52 | INFO     | rag.vector_store:add_chunks:84 - All chunks already indexed.
+2026-04-12 12:39:52 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-12 12:39:53 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-12 12:39:53 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-12 12:40:18 | INFO     | query.pipeline:run:96 - Processing query: who ms dhoni...
+2026-04-12 12:40:19 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:40:25 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who ms dhoni
+2026-04-12 12:40:25 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-12 12:40:46 | WARNING  | utils.cache:clear:71 - Cache cleared!
+2026-04-12 12:41:39 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-12 12:42:19 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 12:42:20 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 12:42:23 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 12:42:26 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-12 12:42:26 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 12:42:27 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 12:43:13 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 12:43:14 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 12:43:16 | INFO     | llm.llm_router:_init:92 - Ollama initialized: llama3.1
+2026-04-12 12:43:18 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-12 12:43:18 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 12:43:19 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 12:43:52 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-12 12:43:52 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-12 12:44:23 | ERROR    | rag.embedder:_load_model:41 - Failed to load embedding model: Cannot send a request, as the client has been closed.
+2026-04-12 12:44:23 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-12 12:44:23 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-12 12:44:27 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 12:44:27 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-12 12:44:27 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-12 12:44:27 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 0 vectors, 20 entities, 29 relations
+2026-04-12 12:46:21 | INFO     | query.pipeline:run:96 - Processing query: who  is msd...
+2026-04-12 12:46:23 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:46:39 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who  is msd
+2026-04-12 12:46:39 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-12 12:52:41 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-12 12:52:42 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:52:59 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-12 12:52:59 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Groq
+2026-04-12 12:53:26 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 12:53:26 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 12:53:26 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-12 12:53:26 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-12 12:53:26 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 12:53:28 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 12:53:28 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 13 relations
+2026-04-12 12:53:34 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 12:53:34 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 12:53:34 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-12 12:53:34 | ERROR    | rag.vector_store:add_chunks:92 - Failed to compute embeddings.
+2026-04-12 12:53:34 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 12:53:36 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:53:36 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-12 12:54:07 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 4 relations
+2026-04-12 12:54:27 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 12:54:44 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 12:54:45 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:54:45 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-12 12:55:08 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 3 relations
+2026-04-12 12:56:23 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 12 relations
+2026-04-12 12:56:25 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:56:25 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-12 12:56:59 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 5 relations
+2026-04-12 12:57:15 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 12:57:39 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 3 relations
+2026-04-12 12:57:41 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:57:41 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-12 12:57:58 | INFO     | extraction.relation_extractor:_extract_with_llm:162 - LLM extracted 2 relations
+2026-04-12 12:57:58 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 35 relations from 12 chunks
+2026-04-12 12:57:58 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 0 vectors, 31 entities, 35 relations
+2026-04-12 12:58:44 | INFO     | query.pipeline:run:96 - Processing query: what is Agentic Ai...
+2026-04-12 12:58:45 | ERROR    | llm.llm_router:generate:71 - Groq error: Connection error.
+2026-04-12 12:58:45 | WARNING  | llm.llm_router:generate:184 - Groq in 60s cooldown. Using Ollama.
+2026-04-12 12:58:51 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is Agentic Ai
+2026-04-12 12:58:51 | ERROR    | rag.embedder:encode:55 - Embedding model not available.
+2026-04-12 12:58:51 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=0 graph=0 conf=low llm=Ollama
+2026-04-12 13:10:11 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 13:10:12 | INFO     | llm.llm_router:_init:36 - Groq initialized: llama-3.1-8b-instant
+2026-04-12 13:10:14 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-12 13:10:17 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-12 13:10:17 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 13:10:18 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 13:11:11 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 13:11:11 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-12 13:11:13 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-12 13:11:15 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (0 docs)
+2026-04-12 13:11:15 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 13:11:16 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 13:11:56 | WARNING  | rag.vector_store:clear:209 - Vector store cleared!
+2026-04-12 13:12:14 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: ms_dhoni
+2026-04-12 13:12:14 | INFO     | ingestion.preprocessor:process:88 - Generated 3 chunks from 'ms_dhoni'
+2026-04-12 13:12:58 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 13:12:58 | INFO     | rag.vector_store:add_chunks:111 - Indexed 3 chunks into ChromaDB.
+2026-04-12 13:13:01 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 13:13:01 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 3 chunks...
+2026-04-12 13:13:01 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 20 entities, 29 relations from 3 chunks
+2026-04-12 13:13:01 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'ms_dhoni': 3 chunks, 3 vectors, 20 entities, 29 relations
+2026-04-12 13:13:30 | INFO     | query.pipeline:run:96 - Processing query: who is msd...
+2026-04-12 13:13:40 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msd
+2026-04-12 13:13:40 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-12 13:13:59 | INFO     | query.pipeline:run:96 - Processing query: who is msdhoni...
+2026-04-12 13:14:03 | INFO     | query.classifier:classify:100 - Query classified [QueryType.GRAPH] (LLM, conf=0.90): who is msdhoni
+2026-04-12 13:14:03 | INFO     | query.pipeline:run:131 - Query answered [GRAPH] sources=0 graph=0 conf=low llm=Ollama
+2026-04-12 13:23:27 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 13:23:42 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 13:29:12 | INFO     | utils.cache:__init__:31 - Cache initialized at: ./data/cache
+2026-04-12 13:29:12 | WARNING  | llm.llm_router:_init:30 - Groq API key not configured.
+2026-04-12 13:29:15 | INFO     | llm.llm_router:_init:92 - Ollama initialized: phi3
+2026-04-12 13:29:18 | INFO     | rag.vector_store:_init:50 - ChromaDB initialized: kg_rag_collection (3 docs)
+2026-04-12 13:29:18 | INFO     | graph.neo4j_client:get_graph_client:315 - Using NetworkX fallback graph.
+2026-04-12 13:29:19 | INFO     | graph.neo4j_client:__init__:24 - NetworkX fallback graph initialized.
+2026-04-12 13:29:51 | INFO     | ingestion.preprocessor:process:49 - Preprocessing document: Agentic_AI_Comprehensive_Report (1)
+2026-04-12 13:29:51 | INFO     | ingestion.preprocessor:process:88 - Generated 13 chunks from 'Agentic_AI_Comprehensive_Report (1)'
+2026-04-12 13:30:32 | INFO     | rag.embedder:_load_model:36 - Embedding model loaded: all-MiniLM-L6-v2 (dim=384)
+2026-04-12 13:30:32 | INFO     | rag.vector_store:add_chunks:111 - Indexed 13 chunks into ChromaDB.
+2026-04-12 13:30:35 | INFO     | extraction.ner:_load_model:66 - spaCy model loaded: en_core_web_sm
+2026-04-12 13:30:35 | INFO     | graph.graph_builder:build_from_chunks:49 - Building Knowledge Graph from 13 chunks...
+2026-04-12 13:30:36 | INFO     | graph.graph_builder:build_from_chunks:100 - KG built: 31 entities, 13 relations from 12 chunks
+2026-04-12 13:30:36 | INFO     | ingestion.pipeline:_process_document:153 - Ingested 'Agentic_AI_Comprehensive_Report (1)': 13 chunks, 13 vectors, 31 entities, 13 relations
+2026-04-12 13:33:23 | INFO     | query.pipeline:run:96 - Processing query: what is Agentic AI...
+2026-04-12 13:33:31 | INFO     | query.classifier:classify:100 - Query classified [QueryType.VECTOR] (LLM, conf=0.90): what is Agentic AI
+2026-04-12 13:33:44 | INFO     | query.pipeline:run:131 - Query answered [VECTOR] sources=5 graph=0 conf=medium llm=Ollama
